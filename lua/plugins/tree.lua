@@ -7,6 +7,6 @@ return {
       hijack_netrw = false
     })
 
-    vim.keymap.set('n', '<leader>ex', ':NvimTreeFindFileToggle<CR>')
+    vim.keymap.set('n', '<leader>ex', ':NvimTreeFindFileToggle<CR>', { desc = 'Toggle [Ex]plorer' })
   end,
 }

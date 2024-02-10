@@ -18,6 +18,6 @@ return {
     vim.keymap.set("i", "<C-Right>", SuggestOneCharacter, { expr = true, remap = false })
     vim.keymap.set("i", "<S-Right>", SuggestOneWord, { expr = true, remap = false })
     vim.keymap.set("i", "<M-Right>", 'copilot#Accept("")', { silent = true, expr = true })
-    vim.keymap.set("n", "<leader>vco", "<cmd>Copilot<CR>", { silent = true })
+    vim.keymap.set("n", "<leader>vco", "<cmd>Copilot<CR>", { silent = true, desc = "[V]iew [Co]pilot"})
   end,
 }
