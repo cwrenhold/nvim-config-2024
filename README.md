@@ -32,7 +32,7 @@ The configuration has been split into three sections:
     - Sets the leader (both global and local)
     - Starts loading in configuration
 - [lua/core](./lua/core) - This is where all setting are stored which are not related to external plugins and have no dependencies, and also includes the bootstrapper for [lazy.nvim](https://github.com/folke/lazy.nvim). Configuration settings are broken down into *logical* groupings.
-- [lua/plugins](./lua/plugins) - This is where all plugins are configured. These are mostly set up with a single file per plugin, but this is not always the case when it comes to dependencies and the like. In general, all configuration is in the respective plugin's file, including and keymaps which are specific to that plugin.
+- [lua/plugins](./lua/plugins) - This is where all plugins are configured. These are mostly set up with a single file per plugin, but this is not always the case when it comes to dependencies and the like. In general, all configuration is in the respective plugin's file, including any keymaps which are specific to that plugin.
 
 # Included plugins
 
