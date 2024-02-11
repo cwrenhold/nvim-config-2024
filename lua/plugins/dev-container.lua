@@ -19,6 +19,8 @@ return {
           options = {},
         },
       },
+      container_runtime = "docker",
+      compose_command = "docker compose",
     }
   end
 }
