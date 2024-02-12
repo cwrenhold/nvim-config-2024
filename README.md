@@ -43,6 +43,7 @@ The configuration has been split into three sections:
 - fidget.nvim
 - friendly-snippets
 - gitsigns.nvim
+- indent-blankline.nvim
 - lazy.nvim
 - lualine.nvim
 - LuaSnip
