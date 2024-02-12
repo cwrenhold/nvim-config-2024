@@ -1,14 +1,17 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
   config = function()
+    local default_char = '┊'
+    -- local scope_char = '│'
+
     require("ibl").setup {
-      scope = {
-        highlight = highlight,
-        char = "│",
-      },
+      -- scope = {
+      --   char = scope_char,
+      -- },
       indent = {
-        char = '┊'
-      },
+        char = default_char,
+        tab_char = default_char,
+      }
     }
   end
 }
