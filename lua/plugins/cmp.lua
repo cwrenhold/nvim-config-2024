@@ -11,6 +11,9 @@ return {
 
     -- Adds a number of user-friendly snippets
     'rafamadriz/friendly-snippets',
+
+    -- Adds Copilot as a source
+    "zbirenbaum/copilot-cmp",
   },
   config = function()
     local cmp = require 'cmp'
@@ -54,8 +57,9 @@ return {
         end, { 'i', 's' }),
       },
       sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
+        { name = 'copilot', group_index = 2 },
+        { name = 'nvim_lsp', group_index = 2 },
+        { name = 'luasnip', group_index = 2 },
       },
     }
   end
