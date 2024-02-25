@@ -24,7 +24,7 @@ return {
         'vim',
         'bash'
       },
-    
+
       -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
       auto_install = false,
       sync_install = false,
@@ -88,6 +88,11 @@ return {
       rainbow = {
         enable = true
       }
+    }
+
+    require('treesitter-context').setup{
+      max_lines = 10,
+      multiline_threshold = 10,
     }
   end
 }
