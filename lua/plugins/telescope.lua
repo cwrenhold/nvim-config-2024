@@ -6,15 +6,30 @@ return {
   },
   config = function ()
     require('telescope').setup {
-        defaults = {
-          mappings = {
-            i = {
-              ['<C-u>'] = false,
-              ['<C-d>'] = false,
-            },
+      pickers = {
+        find_files = {
+          hidden = true,
+          no_ignore = true,
+        }
+      },
+      defaults = {
+        file_ignore_patterns = {
+          '.git/',
+          'node_modules/',
+          'vendor/',
+          'target/',
+          'dist/',
+          'bin/',
+          'obj/',
+        },
+        mappings = {
+          i = {
+            ['<C-u>'] = false,
+            ['<C-d>'] = false,
           },
         },
-      }
+      },
+    }
 
     -- Enable telescope fzf native, if installed
     pcall(require('telescope').load_extension, 'fzf')
