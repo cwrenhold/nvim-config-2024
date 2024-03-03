@@ -39,7 +39,8 @@ The configuration has been split into three sections:
 - cmp-nvim-lsp
 - cmp_luasnip
 - Comment.nvim
-- copilot.vim
+- copilot-cmp
+- copilot.lua
 - fidget.nvim
 - friendly-snippets
 - gitsigns.nvim
