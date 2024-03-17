@@ -1,6 +1,11 @@
 -- Disable virtual text for diagnostics, so there's only the sign in the gutter
 vim.diagnostic.config({
   virtual_text = false,
+  float = {
+    style = "minimal",
+    border = "rounded",
+    source = "always",
+  },
 })
 
 -- Diagnostic keymaps

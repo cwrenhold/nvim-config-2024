@@ -27,6 +27,16 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
+      window = {
+        completion = {
+          border = 'rounded',
+        },
+        documentation = {
+          border = 'rounded',
+          max_height = math.floor(vim.o.lines * 0.5),
+          max_width = math.floor(vim.o.columns * 0.4),
+        },
+      },
       mapping = cmp.mapping.preset.insert {
         ['<C-n>'] = cmp.mapping.select_next_item(),
         ['<C-p>'] = cmp.mapping.select_prev_item(),

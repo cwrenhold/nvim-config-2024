@@ -3,7 +3,17 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = {
     -- Automatically install LSPs to stdpath for neovim
-    { 'williamboman/mason.nvim', config = true },
+    {
+      'williamboman/mason.nvim',
+      config = true,
+      opts = {
+        ui = {
+          border = 'rounded',
+          height = 0.7,
+          width = 0.7,
+        },
+      },
+    },
     'williamboman/mason-lspconfig.nvim',
 
     -- Useful status updates for LSP
@@ -109,5 +119,25 @@ return {
         }
       end
     }
+
+    require('lspconfig.ui.windows').default_options.border = 'rounded'
+
+    vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+      vim.lsp.handlers.hover,
+      {
+        border = 'rounded',
+        focusable = true,
+        max_height = math.floor(vim.o.lines * 0.5),
+        max_width = math.floor(vim.o.columns * 0.7),
+      }
+    )
+    vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+      vim.lsp.handlers.signature_help,
+      {
+        border = 'rounded',
+        max_height = math.floor(vim.o.lines * 0.5),
+        max_width = math.floor(vim.o.columns * 0.7),
+      }
+    )
   end
 }
