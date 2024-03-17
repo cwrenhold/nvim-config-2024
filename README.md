@@ -61,6 +61,7 @@ The configuration has been split into three sections:
 - nvim-treesitter-context
 - nvim-treesitter-textobjects
 - nvim-web-devicons
+- outline.nvim
 - plenary.nvim
 - rainbow-delimiters.nvim
 - telescope-fzf-native.nvim
