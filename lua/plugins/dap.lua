@@ -90,7 +90,7 @@ return {
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
-    vim.keymap.set('n', '<M-k>', dapui.eval, { desc = 'Debug: Evaluate expression' })
+    vim.keymap.set('n', '<leader>K', dapui.eval, { desc = 'Debug: Evaluate expression' })
 
     -- Install golang specific config
     require('dap-go').setup()
