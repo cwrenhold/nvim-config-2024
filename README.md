@@ -41,6 +41,8 @@ The configuration has been split into three sections:
 - Comment.nvim
 - copilot-cmp
 - copilot.lua
+- dressing.nvim
+- flash.nvim
 - fidget.nvim
 - friendly-snippets
 - gitsigns.nvim
@@ -53,6 +55,7 @@ The configuration has been split into three sections:
 - mason.nvim
 - neodev.nvim
 - night-owl.vim
+- nvim-notify
 - nvim-cmp
 - nvim-dap
 - nvim-dap-go
@@ -72,6 +75,7 @@ The configuration has been split into three sections:
 - telescope-fzf-native.nvim
 - telescope.nvim
 - vim-fugitive
+- vim-illuminate
 - vim-rhubarb
 - vim-sleuth
 - which-key.nvim
