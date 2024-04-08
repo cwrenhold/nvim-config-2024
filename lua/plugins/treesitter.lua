@@ -95,5 +95,44 @@ return {
       max_lines = 10,
       multiline_threshold = 10,
     }
+
+    local go_to_parent_node = function(exclude_column)
+      local get_node_at_cursor = function()
+        local r, c = unpack(vim.api.nvim_win_get_cursor(0))
+        vim.treesitter.get_parser(0):parse({ r - 1, c, r - 1, c })
+        return vim.treesitter.get_node()
+      end
+
+      local node = get_node_at_cursor()
+
+      if node == nil then
+        return
+      end
+
+      local node_start_row, node_start_col, _, _ = node:range()
+      local parent = node
+      local parent_start_row, parent_start_col = node_start_row, node_start_col
+
+      while (parent_start_row == node_start_row
+        and(exclude_column or parent_start_col == node_start_col)) do
+        ---@diagnostic disable-next-line: cast-local-type
+        parent = parent:parent()
+
+        if parent == nil then
+          return
+        end
+
+        parent_start_row, parent_start_col, _, _ = parent:range()
+      end
+
+      if parent == nil then
+        return
+      end
+
+      vim.api.nvim_win_set_cursor(0, { parent_start_row + 1, parent_start_col })
+    end
+
+    vim.keymap.set('n', '<leader>(', function() go_to_parent_node(false) end, { silent = true, desc = "Go to parent node" })
+    vim.keymap.set('n', '<leader>{', function() go_to_parent_node(true) end, { silent = true, desc = "Go to parent node (excluding line)" })
   end
 }
