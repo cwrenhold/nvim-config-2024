@@ -113,7 +113,12 @@ return {
       local parent = node
       local parent_start_row, parent_start_col = node_start_row, node_start_col
 
-      while (parent_start_row == node_start_row
+      -- Just to prevent infinite loops...
+      local max_attempts = 10
+      local current_attempt = 0
+
+      while (current_attempt < max_attempts
+        and parent_start_row == node_start_row
         and(exclude_column or parent_start_col == node_start_col)) do
         ---@diagnostic disable-next-line: cast-local-type
         parent = parent:parent()
@@ -123,6 +128,7 @@ return {
         end
 
         parent_start_row, parent_start_col, _, _ = parent:range()
+        current_attempt = current_attempt + 1
       end
 
       if parent == nil then
