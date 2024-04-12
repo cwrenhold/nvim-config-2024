@@ -42,8 +42,8 @@ The configuration has been split into three sections:
 - copilot-cmp
 - copilot.lua
 - dressing.nvim
-- flash.nvim
 - fidget.nvim
+- flash.nvim
 - friendly-snippets
 - gitsigns.nvim
 - indent-blankline.nvim
@@ -55,28 +55,34 @@ The configuration has been split into three sections:
 - mason.nvim
 - neodev.nvim
 - night-owl.vim
-- nvim-notify
 - nvim-cmp
 - nvim-dap
 - nvim-dap-go
 - nvim-dap-ui
 - nvim-lint
 - nvim-lspconfig
+- nvim-neoclip.lua
 - nvim-nio
-- nvim-tree
+- nvim-notify
+- nvim-tree.lua
 - nvim-treesitter
 - nvim-treesitter-context
 - nvim-treesitter-textobjects
 - nvim-web-devicons
+- oil.nvim
 - outline.nvim
 - overseer.nvim
 - plenary.nvim
 - rainbow-delimiters.nvim
 - telescope-fzf-native.nvim
 - telescope.nvim
+- toggleterm.nvim
 - vim-fugitive
 - vim-illuminate
 - vim-rhubarb
 - vim-sleuth
 - which-key.nvim
+
+# Currently disabled
+- noice.nvim - This is disabled as it seems to be causing a few issues for me and I haven't had the time to look into it.
 
