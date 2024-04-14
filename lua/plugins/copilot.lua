@@ -3,6 +3,11 @@ return {
   dependencies = {
     "hrsh7th/nvim-cmp"
   },
+  cond = function()
+    local node_utils = require("utilities.node")
+    return node_utils.node_version() >= 18
+    -- return false
+  end,
   cmd = "Copilot",
   -- build = ":Copilot auth",
   event = "InsertEnter",
