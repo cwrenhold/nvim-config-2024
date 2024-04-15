@@ -4,7 +4,7 @@ vim.diagnostic.config({
   float = {
     style = "minimal",
     border = "rounded",
-    source = "always",
+    source = 'if_many',
   },
 })
 
